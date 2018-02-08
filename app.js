@@ -1,16 +1,38 @@
-/*function allowDrop(ev) {
-    ev.preventDefault();
-}
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+$(document).ready(function () {
+   
+});
+function validar() {
+    var nombre = document.forms.MiFormulario.nombre;
+    var codigo = document.forms.MiFormulario.codigo;
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}*/
+    if (nombre.value.length > 0) {
+        // el nombre tiene mas de un caracter
+        nombre.style.borderColor = "#808080";
+        var nombreOk = true;
+    } else {
+        // el nombre es incorrecto
+        nombre.style.borderColor = "#ff0000";
+        var nombreOk = false;
+    }
+
+    if (codigo.value.length == 4) {
+        // el codigo tiene los 4 digitos
+        codigo.style.borderColor = "#808080";
+        var codigoOk = true;
+    } else {
+        // el codigo es incorrecto
+        codigo.style.borderColor = "#ff0000";
+        var codigoOk = false;
+    }
+
+    // Si el nombre y el código son correctos...
+    if (nombreOk && codigoOk)
+        return true;
+
+    // Si devuelve false, no permite que se envie el formulario
+    return false;
+}
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -24,8 +46,8 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }
-interact('.resize-drag')
-    .draggable({
+
+interact('.resize-drag').draggable({
         onmove: window.dragMoveListener,
         restrict: {
             restriction: 'parent',
