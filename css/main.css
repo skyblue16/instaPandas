@@ -1,0 +1,69 @@
+/*#div1 {
+    width: 350px;
+    height: 370px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.img-griz {
+   width: 300px;
+   height: 300px;
+}*/
+body {
+    background-color: #bbdefb;
+}
+.nav {
+    background-color: white;
+    padding: 5%;
+}
+.img {
+    width: 200px;
+    height: 200px;
+    position: relative !important;
+    bottom: 46px ;
+    left: 330px !important;
+}
+#div2 {
+    float: top;
+    width: 700px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+#div1 {
+    float: top;
+    height: 300px;
+    width: 652px;
+    padding: 25px;
+    border: 1px solid black;
+}
+/*.img-panda {
+    width: 200px;
+    height: 200px;
+}*/
+.resize-drag {
+  background-color: #29e;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 20px;
+
+  width: 320px;
+
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.resize-container {
+  display: inline-block;
+  width: 700px;
+  height: 340px;
+}
+.center {
+    margin-left: 22%;
+}
+
